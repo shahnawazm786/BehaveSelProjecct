@@ -2,6 +2,7 @@ from behave import *
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 
+driver=webdriver.Chrome()
 @given('url given')
 def step_impl(context):
     print('hello')
@@ -17,10 +18,10 @@ def step_impl(context):
     print('url verified')
 
 # --------------------- Login to Sauce Application ----------------------------------
-@given(u'i open the browser')
+@given('i open the browser')
 def step_impl(context):
     #raise NotImplementedError(u'STEP: Given i open the browser')
-    context.driver=webdriver.Chrome()
+    #context.driver=webdriver.Chrome()
     context.driver.implicitly_wait(2)
     context.driver.maximize_window()
 
