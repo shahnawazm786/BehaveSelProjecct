@@ -21,7 +21,7 @@ def step_impl(context):
 @given('i open the browser')
 def step_impl(context):
     #raise NotImplementedError(u'STEP: Given i open the browser')
-    #context.driver=webdriver.Chrome()
+    context.driver=driver
     context.driver.implicitly_wait(2)
     context.driver.maximize_window()
 
